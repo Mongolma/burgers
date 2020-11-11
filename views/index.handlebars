@@ -1,0 +1,45 @@
+<div class="container">
+    <h1 class="text-center mt-5">Eat Da Burger</h1>
+    <br>
+    <div class="text-center mt-3 mb-5">
+        <img src="../assets/img/avocado-burger-flat.jpg" alt="avocada burger"></div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            {{#each burgers}}
+            {{#unless devoured}}
+
+            <p class="label"><span>Freshly made for dear costumer </span>{{this.id}}</p>
+            <p class="label"><span>Delicous </span>{{this.burger_name}}</p>
+
+            <button data-id="{{this.id}}" class="devourburger">Devour it!</button>
+            <br><br>
+            {{/unless}}
+            {{/each}}
+            </ul>
+        </div>
+
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+
+            {{#each burgers}}
+            {{#if devoured}}
+
+            <p class="label"><span>Costumer </span>{{this.id}} said yummy in my tummy</p>
+            <p class="label"><span>Devoured </span>{{this.burger_name}} already :)</p>
+
+            {{/if}}
+            {{/each}}
+
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12 text-center">
+            <input type="text" id="brgr" name="name">
+            <br>
+            <br>
+            <button type="submit" id="submit">Order</button>
+
+        </div>
+    </div>
+</div>
